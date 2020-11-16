@@ -23,6 +23,6 @@ export const { login, logout } = userSlice.actions;
 //   }, 1000);
 // };
 
-export const selectUser = (state) => state.user.user;
+export const selectUser = (state) => state.user.value;
 
 export default userSlice.reducer;

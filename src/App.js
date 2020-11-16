@@ -17,6 +17,7 @@ function App() {
           login({
             uid: authUser.uid,
             photo: authUser.photoURL,
+            email: authUser.email,
             name: authUser.displayName,
           })
         );
