@@ -1,13 +1,15 @@
 import { IconButton } from "@material-ui/core";
 import { MicNoneOutlined } from "@material-ui/icons";
+import Message from "./Message";
 import React, { useState } from "react";
 import "./Chat.css";
 
 const Chat = () => {
-  const [message, setMessage] = useState(null);
+  const [input, setInput] = useState(null);
+  const [message, setMessage] = useState([]);
   const submitHandler = (e) => {
     e.preventDefault();
-    setMessage("");
+    setInput("");
   };
   return (
     <div className="chat">
@@ -20,7 +22,7 @@ const Chat = () => {
       </div>
       {/* chat section */}
       <div className="chat__message">
-        <h1>chat message</h1>
+        <Message />
       </div>
 
       {/* chat input */}
@@ -28,9 +30,9 @@ const Chat = () => {
         <form onSubmit={submitHandler}>
           <input
             type="text"
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e) => setInput(e.target.value)}
             placeholder="iMessage here"
-            value={message}
+            value={input}
           />
           <button>Send</button>
         </form>
