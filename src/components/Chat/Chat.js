@@ -3,10 +3,13 @@ import { MicNoneOutlined } from "@material-ui/icons";
 import Message from "./Message";
 import React, { useState } from "react";
 import "./Chat.css";
+import { useSelector } from "react-redux";
+import { selectChatName } from "../../features/chatSlice";
 
 const Chat = () => {
   const [input, setInput] = useState(null);
   const [message, setMessage] = useState([]);
+  const chatName = useSelector(selectChatName);
   const submitHandler = (e) => {
     e.preventDefault();
     setInput("");
@@ -16,7 +19,7 @@ const Chat = () => {
       {/* chat header  */}
       <div className="chat__header">
         <h4>
-          To: <span>kimga borishi</span>{" "}
+          To: <span>{chatName}</span>{" "}
         </h4>
         <strong>Details</strong>
       </div>
