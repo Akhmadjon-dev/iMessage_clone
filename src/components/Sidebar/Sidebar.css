@@ -34,3 +34,32 @@
 
 
 /* // sidebar chat style here  */
+.sidebar__chats{
+    overflow: scroll;
+    scrollbar-width: 0;
+}
+.sidebar__chats::-webkit-scrollbar{
+    display: none;
+}
+.sidebarChat{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid lightgray;
+    /* justify-content: space-around; */
+    cursor: pointer;
+}
+.sidebarChat:hover{
+    background-color: #3e93fd;
+    color: #fff;
+}
+.sidebarChat__info{
+    margin-left: 15px;
+    position: relative;
+    width: 100%;
+}
+.sidebarChat__time{
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
