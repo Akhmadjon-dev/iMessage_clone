@@ -26,13 +26,6 @@ const Chat = () => {
             snapshot.docs.map((doc) => ({
               id: doc.id,
               data: doc.data(),
-              //   {
-              //     ...doc.data(),
-              //     uid: user.uid,
-              //     photo: user.photo,
-              //     name: user.name,
-              //     email: user.email,
-              //   },
             }))
           )
         );
@@ -50,7 +43,6 @@ const Chat = () => {
     });
     setInput("");
   };
-  console.log(message);
   return (
     <div className="chat">
       {/* chat header  */}
