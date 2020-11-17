@@ -25,11 +25,16 @@ const Sidebar = () => {
       chatName: name,
     });
   };
+  const signOutHandler = () => {
+    
+    auth.signOut();
+
+  };
   return (
     <div className="sidebar">
       <div className="sidebar__header">
         <Avatar
-          onClick={() => auth.signOut()}
+          onClick={signOutHandler}
           src={user.photo}
           className="sidebar__avatar"
         />
